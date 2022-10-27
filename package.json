@@ -1,0 +1,21 @@
+{
+  "name": "chuckster-frontend",
+  "version": "0.0.1",
+  "license": "ISC",
+  "description": "Chuckster Frontend",
+  "keywords": [
+    "chuckster"
+  ],
+  "authors": [
+    "Marty Yee",
+    "Randall Spencer"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MartyTheeMartian/Chuckster-Frontend.git"
+  },
+  "main": "./src/index.js",
+  "scripts": {
+    
+  }
+}
