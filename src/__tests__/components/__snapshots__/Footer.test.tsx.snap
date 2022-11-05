@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders App component 1`] = `
+<footer
+  className="footer"
+>
+  © 2022 Chuckster
+</footer>
+`;
