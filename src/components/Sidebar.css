@@ -1,0 +1,10 @@
+.sidebar-ctn {
+  background-color: teal;
+  width: 280px;
+  height: 100vh;
+}
+
+.title-ctn {
+  font-size: 18px;
+  font-weight: 700;
+}
