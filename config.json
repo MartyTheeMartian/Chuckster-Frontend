@@ -1,0 +1,11 @@
+{
+  "production": {
+    "API_URL": ""
+  },
+  "development": {
+    "API_URL": ""
+  },
+  "local": {
+    "API_URL": "http://localhost:5000/graphql"
+  }
+}
