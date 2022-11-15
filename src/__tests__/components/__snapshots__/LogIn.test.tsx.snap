@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders App component 1`] = `
+<div
+  className="login-ctn"
+>
+  <h2>
+    Login
+  </h2>
+  <div>
+    <form>
+      <input
+        placeholder="email"
+        type="email"
+      />
+      <input
+        placeholder="password"
+        type="password"
+      />
+      <button
+        onClick={[Function]}
+        type="submit"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+  <SignUp />
+</div>
+`;

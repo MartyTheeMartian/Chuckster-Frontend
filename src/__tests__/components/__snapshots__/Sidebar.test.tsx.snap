@@ -2,7 +2,7 @@
 
 exports[`renders App component 1`] = `
 <nav
-  className="sidebar-ctn"
+  className="sidebar-ctn has-background-info"
 >
   <div
     className="title-ctn"

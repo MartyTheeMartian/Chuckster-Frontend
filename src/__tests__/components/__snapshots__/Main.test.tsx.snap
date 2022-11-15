@@ -2,7 +2,7 @@
 
 exports[`renders App component 1`] = `
 <div
-  className="main-ctn"
+  className="main-ctn has-background-info-light"
 >
   Main
 </div>

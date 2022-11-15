@@ -3,19 +3,26 @@ module.exports = {
   collectCoverage: true,
   coverageDirectory: 'coverage',
   coveragePathIgnorePatterns: [
-    'node_modules',
+    '<rootDir>/node_modules',
+    '<rootDir>/src/@types',
+    '<rootDir>/src/assets',
+    '<rootDir>/src/config',
+    '<rootDir>/src/gql',
   ],
   moduleDirectories: [
-    'node_modules',
-    'src',
+    '<rootDir>/node_modules',
+    '<rootDir>/src',
   ],
   moduleNameMapper: {
     '\\.(css)$': 'identity-obj-proxy',
   },
   preset: 'ts-jest',
   setupFilesAfterEnv: [
-    '<rootDir>/src/setupTests.tsx',
+    '<rootDir>/src/config/tests.tsx',
   ],
   testEnvironment: 'jsdom',
+  transform: {
+    '\\.(gql|graphql)$': '@graphql-tools/jest-transform',
+  },
   verbose: true
 };

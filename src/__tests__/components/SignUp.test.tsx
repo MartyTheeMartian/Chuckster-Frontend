@@ -1,9 +1,8 @@
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import App from 'App';
-
+import SignUp from 'components/SignUp';
 
 it('renders App component', () => {
-  const result = shallow(<App />);
+  const result = shallow(<SignUp />);
   expect(toJson(result)).toMatchSnapshot();
 });

@@ -16,7 +16,7 @@
           "version": "detect"
         }
     },
-    "ignorePatterns": ["*.html", "*.css", "*.config.*"],
+    "ignorePatterns": ["*.html", "*.css", "*.snap", "*.gql", "*.config.*"],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": "latest",
@@ -27,28 +27,40 @@
         }
     },
     "rules": {
+        "padded-blocks": 0,
+        "comma-dangle": 0,
+        "no-console": [2, { "allow": ["warn", "error"] }],
+        "indent": [2, 2, { "SwitchCase": 1, "MemberExpression": 0 }],
+        "no-multiple-empty-lines": [2, { "max": 2, "maxEOF": 0 }],
         "quotes": [2, "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
         "jsx-quotes": [2, "prefer-single"],
         "react/react-in-jsx-scope": 0,
         "react/jsx-no-literals": 0,
         "react/jsx-newline": 0,
+        "react/jsx-no-bind": 0,
         "react/jsx-max-depth": 0,
         "react/jsx-sort-props": 0,
+        "react/no-multi-comp": 0,
+        "react/jsx-closing-bracket-location": [2, { "selfClosing": "after-props", "nonEmpty": "after-props" }],
         "react/jsx-filename-extension": [2, { "extensions": [".tsx"] }],
         "react/jsx-indent": [2, 2],
         "react/jsx-indent-props": [2, 2],
-        "no-multiple-empty-lines": [2, { "max": 2, "maxEOF": 0 }],
-        "comma-dangle": 0,
-        "@typescript-eslint/comma-dangle": ["error", {
+        "@typescript-eslint/indent": 0,
+        "@typescript-eslint/space-before-function-paren": 0,
+        "@typescript-eslint/strict-boolean-expressions": 0,
+        "@typescript-eslint/comma-dangle": [2, {
             "arrays": "always-multiline",
             "objects": "always-multiline",
             "imports": "never",
             "exports": "never",
             "functions": "never"
         }],
-        "semi": 0,
         "@typescript-eslint/semi": [2, "always"],
-        "@typescript-eslint/space-before-function-paren": 0,
-        "@typescript-eslint/strict-boolean-expressions": 0
+        "@typescript-eslint/member-delimiter-style": [2, {
+            "multiline": { "delimiter": "semi", "requireLast": true },
+            "singleline": { "delimiter": "semi", "requireLast": false },
+            "multilineDetection": "brackets"
+        }],
+        "@typescript-eslint/array-type": [2, { "default": "array" }]
     }
 }

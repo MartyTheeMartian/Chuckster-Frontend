@@ -4,15 +4,18 @@ exports[`renders App component 1`] = `
 <div
   className="app-ctn"
 >
-  <BrowserRouter>
-    <SideBar />
-    <Routes>
-      <Route
-        element={<Main />}
-        path="/"
-      />
-    </Routes>
-    <Footer />
-  </BrowserRouter>
+  <ContextWrapper>
+    <BrowserRouter>
+      <SideBar />
+      <Routes>
+        <Route
+          element={<Main />}
+          path="/"
+        />
+      </Routes>
+      <LogIn />
+      <Footer />
+    </BrowserRouter>
+  </ContextWrapper>
 </div>
 `;

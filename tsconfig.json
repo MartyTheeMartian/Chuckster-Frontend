@@ -8,15 +8,23 @@
     "jsx": "react-jsx",
     "allowJs": false,
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "strictNullChecks": true,
+    "typeRoots": [
+      "node_modules/@types",
+      "src/@types"
+    ]
   },
+  "files": [
+    "src/@types/gql.d.ts"
+  ],
   "include": [
     "src"
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],
 }

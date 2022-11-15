@@ -6,7 +6,21 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const PORT = 8000;
 
-const ENVORINMENT = process.env.NODE_ENV || 'production';
+var mode = '';
+
+switch (process.env.NODE_ENV) {
+  case 'production':
+    mode = process.env.NODE_ENV;
+    break;
+  case 'development':
+    mode = process.env.NODE_ENV;
+    break;
+  case 'local':
+    mode = 'development';
+    break;
+  default:
+    mode = 'production';
+};
 
 const paths = {
   DIST: path.resolve(__dirname, 'dist'),
@@ -31,13 +45,22 @@ module.exports = {
   performance: {
     hints: false,
   },
-  mode: ENVORINMENT,
+  optimization: {
+    nodeEnv: false,
+  },
+  mode,
   resolve: {
-    preferRelative: true,
-    extensions: ['.ts', '.tsx', '.js', '.json'],
+    preferAbsolute: true,
+    extensions: ['.ts', '.tsx', '.gql', '.js', '.json'],
+    modules: [paths.SRC, 'node_modules'],
   },
   module: {
     rules: [
+      {
+        test: /\.(graphql|gql)$/,
+        exclude: /node_modules/,
+        loader: 'graphql-tag/loader',
+      },
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
@@ -61,6 +84,9 @@ module.exports = {
   plugins: [
     new HTMLWebpackPlugin({
       template: path.join(paths.SRC, 'index.html'),
+    }),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
     }),
     new MiniCssExtractPlugin(),
     new webpack.ProvidePlugin({

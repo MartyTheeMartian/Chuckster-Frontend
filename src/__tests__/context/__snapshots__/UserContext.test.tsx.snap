@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders App component 1`] = `
+<ContextProvider
+  value={
+    {
+      "setUser": [Function],
+      "user": {
+        "authenticated": false,
+        "email": "",
+        "jwtToken": "",
+        "password": "",
+      },
+    }
+  }
+>
+  <BrowserRouter />
+</ContextProvider>
+`;
